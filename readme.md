@@ -1,7 +1,7 @@
 ## BASIC APPS
 
 0. home
- under construction
+ https://apps.msyoka.jp/
  
 1. bin2dec
   https://apps.msyoka.jp/bin2dec
