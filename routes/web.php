@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/bin2dec','ContentsController@bin2dec');
+Route::get('/BorderRadiusPreviewer','ContentsController@BorderRadiusPreviewer');

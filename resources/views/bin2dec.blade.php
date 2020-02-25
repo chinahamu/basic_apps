@@ -5,6 +5,7 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script data-ad-client="ca-pub-1023686431026657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <link href="{{ asset('css/contents.css') }}" rel="stylesheet">
 	<title>bin2dec</title>
 </head>
