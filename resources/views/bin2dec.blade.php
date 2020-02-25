@@ -11,7 +11,7 @@
 <body>
 	<table class="center">
 		<tr>
-			<th style="font-size: xx-large">2進数</th>
+			<th style="font-size: xx-large">BIN</th>
 		</tr>
 		<tr>
 			<td><input type="text" id="bin" name="bin"></td>
@@ -20,10 +20,10 @@
 			<td id="bin_error"></td>
 		</tr>
 		<tr>
-			<td><input type="submit" value="変換" name="convert"></td>
+			<td><input type="submit" value="convert" name="convert"></td>
 		</tr>
 		<tr>
-			<th style="font-size: xx-large">10進数</th>
+			<th style="font-size: xx-large">DEC</th>
 		</tr>
 		<tr>
 			<td id="res" style="font-size:x-large"></td>
@@ -57,12 +57,12 @@
    			var pattern = /^[-]?([0-1]\d*|0)(\.\d+)?$/;
    			test = pattern.test(property);
    			if(i > 8 && !test){
-   				tag = "<span style=\"color:red;font-weight:bold;\">入力できるのは8ケタまでです</span><br><span style=\"color:red;font-weight:bold;\">入力できるのは２進数だけです</span>";
+   				tag = "<span style=\"color:red;font-weight:bold;\">You can enter up to 8 digits.</span><br><span style=\"color:red;font-weight:bold;\">You can only enter binary numbers</span>";
    			}else if(!test){
-   				tag = "<span style=\"color:red;font-weight:bold;\">入力できるのは２進数だけです</span><br>";
+   				tag = "<span style=\"color:red;font-weight:bold;\">You can only enter binary numbers.</span><br>";
    				break;
    			}else if(i > 8){
-   				tag = "<span style=\"color:red;font-weight:bold;\">入力できるのは8ケタまでです</span><br>";
+   				tag = "<span style=\"color:red;font-weight:bold;\">You can enter up to 8 digits.</span><br>";
    			}else{
    				tag = "";
    			}
