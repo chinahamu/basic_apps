@@ -7,26 +7,43 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script data-ad-client="ca-pub-1023686431026657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
 <div class="center">
 	<h1>BorderRadiusPreviewer</h1>
 	<table class="center">
 		<tr>
-			<th>top-left</th>
-			<th>top-right</th>
+			<th>Horizontal-top-left</th>
+			<th>Horizontal-top-right</th>
 		</tr>
 		<tr>
-			<td><input type="text" name="top-left" class="input_radius"></td>
-			<td><input type="text" name="top-right" class="input_radius"></td>
+			<td><input type="text" name="horizontal-top-left" class="input_radius"></td>
+			<td><input type="text" name="horizontal-top-right" class="input_radius"></td>
 		</tr>
 		<tr>
-			<th>bottom-left</th>
-			<th>bottom-right</th>
+			<th>Horizontal-bottom-left</th>
+			<th>Horizontal-bottom-right</th>
 		</tr>
 		<tr>
-			<th><input type="text" name="bottom-left" class="input_radius"></th>
-			<th><input type="text" name="bottom-right" class="input_radius"></th>
+			<th><input type="text" name="horizontal-bottom-left" class="input_radius"></th>
+			<th><input type="text" name="horizontal-bottom-right" class="input_radius"></th>
+		</tr>
+		<tr>
+			<th>Vertical-top-left</th>
+			<th>Vertical-top-right</th>
+		</tr>
+		<tr>
+			<td><input type="text" name="vertical-top-left" class="input_radius"></td>
+			<td><input type="text" name="vertical-top-right" class="input_radius"></td>
+		</tr>
+		<tr>
+			<th>Vertical-bottom-left</th>
+			<th>Vertical-bottom-right</th>
+		</tr>
+		<tr>
+			<th><input type="text" name="vertical-bottom-left" class="input_radius"></th>
+			<th><input type="text" name="vertical-bottom-right" class="input_radius"></th>
 		</tr>
 	</table>
 	<div>
@@ -39,19 +56,28 @@
 <script type="text/javascript">
 	$(".input_radius").keyup(function(){
 		
-		var top_left = $("input[name=\"top-left\"]").val();
-		var top_right = $("input[name=\"top-right\"]").val();
-		var bottom_left = $("input[name=\"bottom-left\"]").val();
-		var bottom_right = $("input[name=\"bottom-right\"]").val();
+		var horizontal_top_left = $("input[name=\"horizontal-top-left\"]").val();
+		var horizontal_top_right = $("input[name=\"horizontal-top-right\"]").val();
+		var horizontal_bottom_left = $("input[name=\"horizontal-bottom-left\"]").val();
+		var horizontal_bottom_right = $("input[name=\"horizontal-bottom-right\"]").val();
+		var vertical_top_left = $("input[name=\"vertical-top-left\"]").val();
+		var vertical_top_right = $("input[name=\"vertical-top-right\"]").val();
+		var vertical_bottom_left = $("input[name=\"vertical-bottom-left\"]").val();
+		var vertical_bottom_right = $("input[name=\"vertical-bottom-right\"]").val();
 
-		top_left = top_left == "" ? 0 : top_left;
-		top_right = top_right == "" ? 0 : top_right;
-		bottom_left = bottom_left == "" ? 0 : bottom_left;
-		bottom_right = bottom_right == "" ? 0 : bottom_right;
-		console.log(top_left);
+		horizontal_top_left = horizontal_top_left == "" ? 0 : horizontal_top_left;
+		horizontal_top_right = horizontal_top_right == "" ? 0 : horizontal_top_right;
+		horizontal_bottom_left = horizontal_bottom_left == "" ? 0 : horizontal_bottom_left;
+		horizontal_bottom_right = horizontal_bottom_right == "" ? 0 : horizontal_bottom_right;
+
+		vertical_top_left = vertical_top_left == "" ? horizontal_top_left : vertical_top_left;
+		vertical_top_right = vertical_top_right == "" ? horizontal_top_right : vertical_top_right;
+		vertical_bottom_left = vertical_bottom_left == "" ? horizontal_bottom_left : vertical_bottom_left;
+		vertical_bottom_right = vertical_bottom_right == "" ? horizontal_bottom_right : vertical_bottom_right;
+
 		$("#res").html("");
 		//$("#radius").css('border-radius',"'top_left top_right bottom_right bottom_left'");
-		$("#res").html("<div style=\"border: solid 2px; width: 80%; height: 200px; color:red;margin-top: 100px;margin-left:100px;border-radius:"+top_left+"px "+top_right+"px "+bottom_right+"px "+bottom_left+"px;\"></div>")
+		$("#res").html("<div style=\"border: solid 2px; width: 80%; height: 200px; color:red;margin-top: 100px;margin-left:100px;border-radius:"+horizontal_top_left+"px "+horizontal_top_right+"px "+horizontal_bottom_right+"px "+horizontal_bottom_left+"px /"+vertical_top_left+"px "+vertical_top_right+"px "+vertical_bottom_right+"px "+vertical_bottom_left+"px;\"></div>")
 	})
 </script>
 </body>

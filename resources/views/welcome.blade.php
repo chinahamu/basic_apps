@@ -3,6 +3,7 @@
 <head>
     <title>HOME</title>
     <link href="{{ asset('css/contents.css') }}" rel="stylesheet">
+    <script data-ad-client="ca-pub-1023686431026657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
     <div class="center">
